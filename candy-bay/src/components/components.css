@@ -77,7 +77,6 @@
 }
 
 .dropdown {
-    display: none;
     width: 100%;
     display: flex;
     align-content: flex-start;
@@ -93,9 +92,6 @@
     display: none;
 }
 
-.drop-show {
-    display: block;
-}
 
 @media screen and (max-width: 600px) {
     .nav-bar {
@@ -146,4 +142,8 @@
     color: rgba(87, 255, 247, 0.881);
     transition: 1s;
     }
+
+    .drop-show {
+    display: block;
+}
 }

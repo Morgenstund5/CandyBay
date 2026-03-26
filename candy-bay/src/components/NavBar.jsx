@@ -7,7 +7,7 @@ import { faBars, faL } from '@fortawesome/free-solid-svg-icons'
 function NavBar() {
     const [isDropdown, setIsDropdown] = useState(false)
 
-    const elements = [
+    const features = [
         {
             id: 1,
             title: "Shop",
@@ -47,8 +47,8 @@ function NavBar() {
 
             <div className='headers'>
                 {
-                elements.map((element) => {
-                    return element.src ? <img className='nav-bar-logo' key={element.id} src={element.src} ></img> : <a className='link' key={element.id} href={element.url}>{element.title}</a>
+                features.map((feature) => {
+                    return feature.src ? <img className='nav-bar-logo' key={feature.id} src={feature.src} ></img> : <a className='link' key={feature.id} href={feature.url}>{feature.title}</a>
                 })
             }
             </div>
@@ -58,15 +58,17 @@ function NavBar() {
         }}/>  {/* change state!!! */}
         </div>
 
-        <div className='dropdown' id='dropdown'>
+        {isDropdown && (
+            <div className='dropdown' id='dropdown'>
             <div className='links'>
             {
-            elements.map((element) => {
-                return element.src ? null : <a className={isDropdown ? 'link drop' : 'link drop-show'} key={element.id} href={element.url}>{element.title}</a>
+            features.map((feature) => {
+                return feature.src ? null : <a className='link drop-show' key={feature.id} href={feature.url}>{feature.title}</a>
             })
         }
+            </div>
         </div>
-        </div>
+        )}
     </nav>
   )
 }
