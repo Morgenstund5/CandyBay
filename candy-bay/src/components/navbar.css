@@ -73,7 +73,6 @@
     color: white;
     font-weight: 700;
     font-size: 18px;
-    border: 1px solid red;
 }
 
 .dropdown {
@@ -102,7 +101,6 @@
     .top-bar {
         gap: 0px;
         padding: 0%;
-        border: 1px solid red;
         width: 100vw;
         justify-content: space-around;
     }
@@ -113,13 +111,11 @@
         padding: 0%;
         width: 33vw;
         height: 10vh;
-        border: 1px solid red;
     }
 
     .nav-bar-logo {
         height: 90%;
         width: 90%;
-        border: 1px solid red;
     }
     .bars-icon {
         display: block;
