@@ -7,6 +7,7 @@
     max-width: 95vw;/*1500px;*/
     margin: 0 auto;
     min-height: 65vh;
+    gap: 5px;
 }
 
 .left-div, .right-div, .img {
@@ -61,8 +62,10 @@
 }
 
 .product-name > p {
-    font-size: 24px;
+    font-size: 20px;
+    white-space: pre-line;
     font-weight: 300;
+    max-width: 550px;
 }
 
 .rating {
@@ -189,7 +192,6 @@
     }
 
     .img-container {
-        border: 2px solid red;
         display: flex;
         align-items: center;
     }

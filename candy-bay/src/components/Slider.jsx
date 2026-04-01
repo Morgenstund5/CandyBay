@@ -1,18 +1,38 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bear from './assets/blue-bear.png'
 import './slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as faStarSolid, faAngleLeft,faAngleRight, faPlus} from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
+import products from '../data/products'
 
 function Slider() {
+  const subProducts = products.slice(0, 5)
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const handleIndex = (direction) => {
+    if(direction === "next") {
+      if(currentIndex != 4) {
+        setCurrentIndex(currentIndex + 1)
+      } else {
+        setCurrentIndex(0)
+      }
+    } else {
+      if(currentIndex != 0) {
+        setCurrentIndex(currentIndex - 1)
+      } else {
+        setCurrentIndex(4)
+      }
+    }
+  }
+
   return (
     <div className='slider'>
-      <FontAwesomeIcon icon={faAngleLeft} className='arrow left'/>
+      <FontAwesomeIcon icon={faAngleLeft} className='arrow left' onClick={() => handleIndex("previous")}/>
       <div className="left-div">
         <div className='product-name'>
-          <h1>PRODUCT TITLE</h1>
-          <p>Brief description</p>
+          <h1>{(subProducts[currentIndex].title).toUpperCase()}</h1>
+          <p>{(subProducts[currentIndex].subtitle).toUpperCase()}</p>
           <div className='rating'>
             <FontAwesomeIcon icon={faStarSolid} />
             <FontAwesomeIcon icon={faStarSolid} />
@@ -23,21 +43,20 @@ function Slider() {
         </div>
       </div>
       <div className='img-container'>
-        <FontAwesomeIcon icon={faAngleLeft} className=' arr'/>
-        <img src={bear} alt="" className='img'/>
-        <FontAwesomeIcon icon={faAngleRight} className=' arr'/>
+        <FontAwesomeIcon icon={faAngleLeft} className=' arr' onClick={() => handleIndex("previous")}/>
+        <img src={subProducts[currentIndex].img} alt="" className='img'/>
+        <FontAwesomeIcon icon={faAngleRight} className=' arr' onClick={() => handleIndex("next")}/>
       </div>
       <div className="right-div">
         <div className="product-price">
           <h2>0.00021 BCH / 0.0802 ETH</h2>
           <p>
-            Product description. Brief pitch sale. How much it contains, etc.
-            Product description. Brief pitch sale. How much it contains, etc.
+            {subProducts[currentIndex].description}
           </p>
           <FontAwesomeIcon icon={faPlus} className='plus'/>
         </div>
       </div>
-      <FontAwesomeIcon icon={faAngleRight} className='arrow right'/>
+      <FontAwesomeIcon icon={faAngleRight} className='arrow right' onClick={() => handleIndex("next")}/>
     </div>
   )
 }
