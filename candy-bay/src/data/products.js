@@ -24,7 +24,7 @@ const products = [
         title: "Blue Wink",
         subtitle: "Playful vibes\nall night long",
         rating: 5,
-        price: 28,
+        price: 30,
         description: `This blue candy pill features a cheeky\n
         winking smiley face designed to bring\n
         playful energy and lighthearted fun\n
@@ -37,7 +37,7 @@ const products = [
         title: "Red Kiss",
         subtitle: "Sweet and bold\nwith attitude",
         rating: 4,
-        price: 32,
+        price: 34,
         description: `Shaped with iconic lips, this red candy\n
         delivers a rich flavor of love and passion,\n
         lasting up to 12 hours for a romantic and\n

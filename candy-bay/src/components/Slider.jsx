@@ -6,7 +6,7 @@ import { faStar as faStarSolid, faAngleLeft,faAngleRight, faPlus} from '@fortawe
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import products from '../data/products'
 
-function Slider() {
+function Slider({priceBCH}) {
   const subProducts = products.slice(0, 5)
   const [currentIndex, setCurrentIndex] = useState(0)
 
@@ -24,6 +24,14 @@ function Slider() {
         setCurrentIndex(4)
       }
     }
+  }
+
+  const convertPrice = (price) => {
+    const productPrice = (price / priceBCH).toFixed(4)
+    if (priceBCH === null) {
+      return <p className='loader'></p>
+    }
+    return <>{productPrice} BCH</>
   }
 
   return (
@@ -49,7 +57,7 @@ function Slider() {
       </div>
       <div className="right-div">
         <div className="product-price">
-          <h2>0.00021 BCH / 0.0802 ETH</h2>
+          <h2>{convertPrice(subProducts[currentIndex].price)}</h2>
           <p>
             {subProducts[currentIndex].description}
           </p>
