@@ -1,9 +1,11 @@
 import './App.css'
 import NavBar from './components/NavBar'
 import Home from './features/Home/Home'
-import bg from './assets/bg-2.png'
+import bg from './assets/bg-3.png'
 import { useEffect } from 'react'
 import useBchPrice from './hooks/useBchPrice'
+import { Outlet } from 'react-router'
+
 
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
         backgroundImage: `url(${bg})`
     }}>
       <NavBar />
-      <Home priceBCH={priceBCH}/>
+      <Outlet context={{ priceBCH }}/>
     </div>
   )
 }

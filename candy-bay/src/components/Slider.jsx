@@ -6,9 +6,8 @@ import { faStar as faStarSolid, faAngleLeft,faAngleRight, faPlus} from '@fortawe
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import products from '../data/products'
 
-function Slider({priceBCH}) {
+function Slider({priceBCH, currentIndex, setCurrentIndex}) {
   const subProducts = products.slice(0, 5)
-  const [currentIndex, setCurrentIndex] = useState(0)
 
   const handleIndex = (direction) => {
     if(direction === "next") {

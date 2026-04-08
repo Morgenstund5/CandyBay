@@ -3,6 +3,7 @@ import './navbar.css'
 import logo from "./assets/logo-t.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faL } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router'
 
 function NavBar() {
     const [isDropdown, setIsDropdown] = useState(false)
@@ -11,7 +12,7 @@ function NavBar() {
         {
             id: 1,
             title: "Shop",
-            url: "",
+            url: "shop",
         },
         {
             id: 2,
@@ -21,7 +22,7 @@ function NavBar() {
         {
             id: 3,
             title: "logo",
-            url: "",
+            url: "/",
             src: logo
         },
         {
@@ -48,11 +49,11 @@ function NavBar() {
             <div className='headers'>
                 {
                 features.map((feature) => {
-                    return feature.src ? <img className='nav-bar-logo' key={feature.id} src={feature.src} ></img> : <a className='link' key={feature.id} href={feature.url}>{feature.title}</a>
+                    return feature.src ? <Link to={feature.url}><img className='nav-bar-logo' key={feature.id} src={feature.src} ></img></Link> : <Link className='link' key={feature.id} to={feature.url}>{feature.title}</Link>
                 })
             }
             </div>
-        
+            
         <FontAwesomeIcon className='bars-icon' icon={faBars} onClick={()=> {
             handleDropdown()
         }}/>  {/* change state!!! */}
