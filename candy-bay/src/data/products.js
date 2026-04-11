@@ -3,6 +3,7 @@ import redKiss from "../assets/products/red-kiss.png"
 import blueWink from "../assets/products/blue-wink.png"
 import lemonDrop from "../assets/products/lemon-drop.png"
 import bumpyRide from "../assets/products/bumpy-ride.png"
+import blueTeddy from "../assets/products/blue-bear.png"
 
 const products = [
     {
@@ -20,6 +21,19 @@ const products = [
     },
     {
         id: 2,
+        img: redKiss,
+        title: "Red Kiss",
+        subtitle: "Sweet and bold\nwith attitude",
+        rating: 4,
+        price: 34,
+        description: `Shaped with iconic lips, this red candy\n
+        delivers a rich flavor of love and passion,\n
+        lasting up to 12 hours for a romantic and\n
+        unforgettable experience.\n Contains 90mg MDMA per pill.`,
+        bg: ""
+    },
+    {
+        id: 3,
         img: blueWink,
         title: "Blue Wink",
         subtitle: "Playful vibes\nall night long",
@@ -29,19 +43,6 @@ const products = [
         winking smiley face designed to bring\n
         playful energy and lighthearted fun\n
         to your Candy Bay experience. Contains 70mg MDMA per pill.`,
-        bg: ""
-    },
-    {
-        id: 3,
-        img: redKiss,
-        title: "Red Kiss",
-        subtitle: "Sweet and bold\nwith attitude",
-        rating: 4,
-        price: 34,
-        description: `Shaped with iconic lips, this red candy\n
-        delivers a rich flavor of love and passion,\n
-        lasting up to 12 hours for a romantic and\n
-        unforgettable experience.\n Contains 90mg MDMA per pill`,
         bg: ""
     },
     {
@@ -69,7 +70,21 @@ const products = [
         and a clean, refreshing finish for any\n
         time of the day.`,
         bg: ""
+    },
+    {
+        id: 6,
+        img: blueTeddy,
+        title: "Blue Teddy",
+        subtitle: "A calm wave of\ncozy euphoria",
+        rating: 5,
+        price: 35,
+        description: `The blue teddy is perfect for a smooth and cozy ride,\n 
+        delivering a balanced wave of warmth and relaxation\n optimized
+        for around five to seven hours of mellow euphoria\n experience.
+        Contains 50mg THC`,
+        bg: ""
     }
+    
 ]
 
 export default products

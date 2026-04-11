@@ -1,4 +1,6 @@
 .app {
   min-height: 100vh;
+  max-width: 100vw;
   background-attachment: fixed;
+  overflow: hidden;
 }

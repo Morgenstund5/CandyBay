@@ -11,7 +11,6 @@ function useBchPrice() {
         method: 'GET',
         headers: {
           'Content-Type': 'application/json',
-         /* 'x-cg-pro-api-key': '' */
         }
       }
     );

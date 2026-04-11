@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import bear from './assets/blue-bear.png'
 import './slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as faStarSolid, faAngleLeft,faAngleRight, faPlus} from '@fortawesome/free-solid-svg-icons'
 import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import products from '../data/products'
+import convertPrice from '../utils/ConvertPrice'
+import { PriceContext } from '../context/PriceContext'
 
-function Slider({priceBCH, currentIndex, setCurrentIndex}) {
+function Slider({currentIndex, setCurrentIndex}) {
+  const {priceBCH} = useContext(PriceContext)
   const subProducts = products.slice(0, 5)
 
   const handleIndex = (direction) => {
@@ -23,14 +26,6 @@ function Slider({priceBCH, currentIndex, setCurrentIndex}) {
         setCurrentIndex(4)
       }
     }
-  }
-
-  const convertPrice = (price) => {
-    const productPrice = (price / priceBCH).toFixed(4)
-    if (priceBCH === null) {
-      return <p className='loader'></p>
-    }
-    return <>{productPrice} BCH</>
   }
 
   return (
@@ -56,7 +51,7 @@ function Slider({priceBCH, currentIndex, setCurrentIndex}) {
       </div>
       <div className="right-div">
         <div className="product-price">
-          <h2>{convertPrice(subProducts[currentIndex].price)}</h2>
+          <h2>{convertPrice(subProducts[currentIndex].price, priceBCH)}</h2>
           <p>
             {subProducts[currentIndex].description}
           </p>
