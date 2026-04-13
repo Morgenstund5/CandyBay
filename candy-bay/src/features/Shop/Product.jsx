@@ -6,6 +6,7 @@ import convertPrice from '../../utils/ConvertPrice'
 import { PriceContext } from '../../context/PriceContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import displayRating from '../../utils/DisplayRating'
 
 function Product() {
   const {priceBCH} = useContext(PriceContext)
@@ -21,7 +22,7 @@ function Product() {
           <div className='right-div-upper-part'>
             <h1>{product.title}</h1>
             <h3>{product.subtitle}</h3>
-            <p>{product.rating}</p>
+            <p>{displayRating(product.rating)}</p>
           </div>
           <div className='right-div-middle-part'>
             <h2>Price: <span>{convertPrice(product.price, priceBCH)}</span></h2>

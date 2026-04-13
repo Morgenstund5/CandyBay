@@ -64,7 +64,7 @@ function NavBar() {
             <div className='links'>
             {
             features.map((feature) => {
-                return feature.src ? null : <a className='link drop-show' key={feature.id} href={feature.url}>{feature.title}</a>
+                 return feature.src ? null : <a className='link drop-show' key={feature.key} href={feature.url}>{feature.title}</a>
             })
         }
             </div>

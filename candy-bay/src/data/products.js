@@ -4,11 +4,19 @@ import blueWink from "../assets/products/blue-wink.png"
 import lemonDrop from "../assets/products/lemon-drop.png"
 import bumpyRide from "../assets/products/bumpy-ride.png"
 import blueTeddy from "../assets/products/blue-bear.png"
+import bgPurpleFlower from "../assets/products/bg/purple-flower.png"
+import bgRedKiss from "../assets/products/bg/red-kiss.png"
+import bgBlueWink from "../assets/products/bg/blue-wink.png"
+import bgLemonDrop from "../assets/products/bg/lemon-drop.png"
+import bgBumpyRide from "../assets/products/bg/bumpy-ride.png"
+import bgBlueTeddy from "../assets/products/bg/blue-bear.png"
+
 
 const products = [
     {
         id: 1,
         img: purpleFlower,
+        bgImg: bgPurpleFlower,
         title: "Purple Flower",
         subtitle: "A night of\nfluffy happiness",
         rating: 4,
@@ -22,6 +30,7 @@ const products = [
     {
         id: 2,
         img: redKiss,
+        bgImg: bgRedKiss,
         title: "Red Kiss",
         subtitle: "Sweet and bold\nwith attitude",
         rating: 4,
@@ -35,6 +44,7 @@ const products = [
     {
         id: 3,
         img: blueWink,
+        bgImg: bgBlueWink,
         title: "Blue Wink",
         subtitle: "Playful vibes\nall night long",
         rating: 5,
@@ -48,6 +58,7 @@ const products = [
     {
         id: 4,
         img: lemonDrop,
+        bgImg: bgLemonDrop,
         title: "Lemon Drop",
         subtitle: "Fresh citrus\nenergy boost",
         rating: 4,
@@ -61,6 +72,7 @@ const products = [
     {
         id: 5,
         img: bumpyRide,
+        bgImg: bgBumpyRide,
         title: "Bumpy Ride",
         subtitle: "Cool and crisp\nrefreshment",
         rating: 3,
@@ -74,6 +86,7 @@ const products = [
     {
         id: 6,
         img: blueTeddy,
+        bgImg: bgBlueTeddy,
         title: "Blue Teddy",
         subtitle: "A calm wave of\ncozy euphoria",
         rating: 5,

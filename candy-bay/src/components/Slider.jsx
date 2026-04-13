@@ -7,6 +7,7 @@ import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import products from '../data/products'
 import convertPrice from '../utils/ConvertPrice'
 import { PriceContext } from '../context/PriceContext'
+import displayRating from '../utils/DisplayRating'
 
 function Slider({currentIndex, setCurrentIndex}) {
   const {priceBCH} = useContext(PriceContext)
@@ -28,6 +29,22 @@ function Slider({currentIndex, setCurrentIndex}) {
     }
   }
 
+  /* function displayRating(rating) {
+    const stars = []
+
+        for (let i = 0; i < 5; i++) {
+          stars.push(
+            <FontAwesomeIcon
+              key={i}
+              icon={i < rating ? faStarSolid : faStarRegular}
+            />
+          )
+        }
+    return (
+      <>{stars}</>
+    )
+  }*/
+
   return (
     <div className='slider'>
       <FontAwesomeIcon icon={faAngleLeft} className='arrow left' onClick={() => handleIndex("previous")}/>
@@ -36,11 +53,7 @@ function Slider({currentIndex, setCurrentIndex}) {
           <h1>{(subProducts[currentIndex].title).toUpperCase()}</h1>
           <p>{(subProducts[currentIndex].subtitle).toUpperCase()}</p>
           <div className='rating'>
-            <FontAwesomeIcon icon={faStarSolid} />
-            <FontAwesomeIcon icon={faStarSolid} />
-            <FontAwesomeIcon icon={faStarSolid} />
-            <FontAwesomeIcon icon={faStarSolid} />
-            <FontAwesomeIcon icon={faStarRegular} />
+            {displayRating(subProducts[currentIndex].rating)}
           </div>
         </div>
       </div>
