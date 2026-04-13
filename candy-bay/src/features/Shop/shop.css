@@ -28,6 +28,7 @@
     padding-bottom: 5px;
     cursor: pointer;
     position: relative;
+    text-decoration: none;
 }
 
 .product-box:hover {
@@ -76,6 +77,14 @@
   background: rgba(0, 255, 200, 0.15);
   border-color: rgba(0, 255, 200, 0.5);
   transition: 0.2s;
+}
+
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  display: contents;
+  margin: 0;
+  padding: 0;
 }
 
 @media screen and (max-width: 600px) {

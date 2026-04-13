@@ -6,6 +6,7 @@ import './shop.css'
 import products from '../../data/products'
 import convertPrice from '../../utils/ConvertPrice'
 import { PriceContext } from '../../context/PriceContext'
+import { Link } from 'react-router'
 
 function Shop() {
   const {priceBCH} = useContext(PriceContext)
@@ -13,14 +14,14 @@ function Shop() {
   return (
     <div className='shop'>
       {products.map(product => (
-        <div className='product-box' key={product.id}>
-        <h2>{product.title}</h2>
-        <img src={product.img} className='product-logo'/>
-        <p>{convertPrice(product.price, priceBCH)}</p>
-        <div>
-          <FontAwesomeIcon icon={faCartShopping} className='cart'/>
-        </div>
-      </div>
+          <Link className='product-box' key={product.id} to={`/product/${product.id}`}>
+            <h2>{product.title}</h2>
+            <img src={product.img} className='product-logo'/>
+            <p>{convertPrice(product.price, priceBCH)}</p>
+            <div onClick={(e) => e.stopPropagation()}>
+              <FontAwesomeIcon icon={faCartShopping} className='cart'/>
+            </div>
+        </Link>
       ))}
     </div>
   )
