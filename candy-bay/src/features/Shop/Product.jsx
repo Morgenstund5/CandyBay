@@ -13,10 +13,10 @@ function Product() {
     const params = useParams()
     const product = products.find(p => p.id === Number(params.productId)) // useParams() always returns strings
   return (
-    <>
+    <div className='product-container'>
       <div className='product'>
-        <div className="product_left-div">
-          <img src={product.bgImg} alt="" />
+        <div className="product_left-div" style={{ backgroundImage: `url(${product.bgImg})` }}>
+          {/*<img src={product.bgImg} alt="" />*/}
         </div>
         <div className="product_right-div">
           <div className='right-div-upper-part'>
@@ -38,7 +38,7 @@ function Product() {
           </button>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 

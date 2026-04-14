@@ -7,6 +7,7 @@ import products from '../../data/products'
 import convertPrice from '../../utils/ConvertPrice'
 import { PriceContext } from '../../context/PriceContext'
 import { Link } from 'react-router'
+import displayRating from '../../utils/DisplayRating'
 
 function Shop() {
   const {priceBCH} = useContext(PriceContext)
@@ -17,6 +18,7 @@ function Shop() {
           <Link className='product-box' key={product.id} to={`/product/${product.id}`}>
             <h2>{product.title}</h2>
             <img src={product.img} className='product-logo'/>
+            <p>{displayRating(product.rating)}</p>
             <p>{convertPrice(product.price, priceBCH)}</p>
             <div onClick={(e) => e.stopPropagation()}>
               <FontAwesomeIcon icon={faCartShopping} className='cart'/>
