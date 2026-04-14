@@ -1,4 +1,4 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import products from '../../data/products'
 import './product.css'
 import { useParams } from 'react-router'
@@ -7,11 +7,18 @@ import { PriceContext } from '../../context/PriceContext'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
 import displayRating from '../../utils/DisplayRating'
+import { CartContext } from '../../context/CartContext'
 
 function Product() {
+  const {addToCart, deleteFromCart, productsInCart} = useContext(CartContext)
   const {priceBCH} = useContext(PriceContext)
-    const params = useParams()
-    const product = products.find(p => p.id === Number(params.productId)) // useParams() always returns strings
+  const params = useParams()
+  const product = products.find(p => p.id === Number(params.productId)) // useParams() always returns strings
+  
+  useEffect(() => {
+    console.log(productsInCart);
+  }, [productsInCart]);
+  
   return (
     <div className='product-container'>
       <div className='product'>
@@ -32,7 +39,7 @@ function Product() {
               {product.description}
             </p>
           </div>
-          <button className="cart-div">
+          <button className="cart-div" onClick={() => addToCart(product)}>
             <FontAwesomeIcon icon={faCartShopping} />
             <span>Add to Cart</span>
           </button>
