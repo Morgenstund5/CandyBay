@@ -15,12 +15,32 @@ export const CartProvider = ({ children }) => {
         if(isAlreadyInCart) {
             return "Product already in cart!"
         } else {
-            setProductsInCart(prev => [...prev, product])
+            setProductsInCart(prev => [...prev, { ...product, quantity: 1 }])
         }
     }
 
     const deleteFromCart = (product) => {
-        setProductsInCart(prev => prev.filter(p => p.id === product.id))
+        setProductsInCart(prev => prev.filter(p => p.id != product.id))
+    }
+
+    const incrementQuantity = (product) => {
+        setProductsInCart(prev => {
+            return prev.map(p =>
+                p.id === product.id
+                ? { ...p, quantity: p.quantity + 1 }
+                : p
+            );
+        });
+    }
+
+    const decreaseQuantity = (product) => {
+        setProductsInCart(prev => {
+            return prev.map(p =>
+                p.id === product.id
+                ? { ...p, quantity: p.quantity - 1 }
+                : p
+            );
+        });
     }
 
     useEffect(() => {
@@ -32,7 +52,8 @@ export const CartProvider = ({ children }) => {
         <CartContext value={{
             productsInCart, setProductsInCart,
             productsCount, setProductsCount,
-            addToCart, deleteFromCart
+            addToCart, deleteFromCart,
+            incrementQuantity, decreaseQuantity
         }} >
             {children}
         </CartContext>
