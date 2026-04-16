@@ -15,10 +15,6 @@ function Product() {
   const params = useParams()
   const product = products.find(p => p.id === Number(params.productId)) // useParams() always returns strings
   
-  useEffect(() => {
-    console.log(productsInCart);
-  }, [productsInCart]);
-  
   return (
     <div className='product-container'>
       <div className='product'>
@@ -32,7 +28,7 @@ function Product() {
             <p>{displayRating(product.rating)}</p>
           </div>
           <div className='right-div-middle-part'>
-            <h2>Price: <span>{convertPrice(product.price, priceBCH)}</span></h2>
+            <h2>Price: <span>{convertPrice(product.price, priceBCH)} BCH</span></h2>
           </div>
           <div className='right-div-bottom-part'>
             <p>
