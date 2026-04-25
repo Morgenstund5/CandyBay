@@ -25,6 +25,7 @@ const products = [
         for a night full of fluffy happiness with it's dose\n optimized
         for around six hours of perfect ecstasy\n experience.
         Contains 70mg MDMA per pill.`,
+        category: "MDMA",
         bg: ""
     },
     {
@@ -39,6 +40,7 @@ const products = [
         delivers a rich flavor of love and passion,\n
         lasting up to 12 hours for a romantic and\n
         unforgettable experience.\n Contains 90mg MDMA per pill.`,
+        category: "MDMA",
         bg: ""
     },
     {
@@ -53,6 +55,7 @@ const products = [
         winking smiley face designed to bring\n
         playful energy and lighthearted fun\n
         to your Candy Bay experience. Contains 70mg MDMA per pill.`,
+        category: "MDMA",
         bg: ""
     },
     {
@@ -67,6 +70,7 @@ const products = [
         center that delivers a refreshing and\n
         zesty twist, perfect for keeping things\n
         light and vibrant for about 3 hours. Contains 45mg MDMA per pill`,
+        category: "MDMA",
         bg: ""
     },
     {
@@ -81,6 +85,7 @@ const products = [
         essence that offers a cooling sensation\n
         and a clean, refreshing finish for any\n
         time of the day.`,
+        category: "MDMA",
         bg: ""
     },
     {
@@ -95,6 +100,7 @@ const products = [
         delivering a balanced wave of warmth and relaxation\n optimized
         for around five to seven hours of mellow euphoria\n experience.
         Contains 50mg THC`,
+        category: "THC",
         bg: ""
     }
     

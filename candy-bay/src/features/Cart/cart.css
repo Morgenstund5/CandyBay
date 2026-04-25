@@ -130,3 +130,36 @@
     min-height: 140px;
     max-height: 400px;
 }
+
+.no-products {
+    margin: 10px auto;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.checkout-btn {
+    all: unset;
+    cursor: pointer;
+    border: 2px solid rgba(0, 255, 200, 0.5);
+    background-color: cornflowerblue;
+    border-radius: 7px;
+    max-width: 90px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 4px 10px;
+    font-family: 'Poppins','Roboto', 'Archivo Black', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.checkout-btn:hover {
+    transition: 0.5s;
+    background-color: rgb(31, 110, 237);
+}
+
+.total-price {
+    text-align: end;
+    padding: 4px 8px;
+    font-family: 'Poppins','Roboto', 'Archivo Black', sans-serif;
+    font-size: 20px;
+}

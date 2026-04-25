@@ -9,6 +9,7 @@ export const CartContext = createContext({
 export const CartProvider = ({ children }) => {
     const [productsInCart, setProductsInCart] = useState([])
     const [productsCount, setProductsCount] = useState(0)
+    const [totalPrice, setTotalPrice] = useState(0)
 
     const addToCart = (product) => {
         const isAlreadyInCart = productsInCart.some(item => item.id === product.id)
@@ -43,8 +44,16 @@ export const CartProvider = ({ children }) => {
         });
     }
 
+    function calcProductsCount() {
+        let count = 0
+        for(let i = 0; i < productsInCart.length; i++) {
+            count += productsInCart[i].quantity
+        }
+        return count
+    }
+
     useEffect(() => {
-        setProductsCount(productsInCart.length)
+        setProductsCount(calcProductsCount(productsInCart))
     }, [productsInCart])
 
 
@@ -53,7 +62,8 @@ export const CartProvider = ({ children }) => {
             productsInCart, setProductsInCart,
             productsCount, setProductsCount,
             addToCart, deleteFromCart,
-            incrementQuantity, decreaseQuantity
+            incrementQuantity, decreaseQuantity,
+            totalPrice, setTotalPrice
         }} >
             {children}
         </CartContext>

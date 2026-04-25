@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+.address-form-div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 4px 10px;
+}
+
+form {
+    font-family: 'Roboto', sans-serif;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto 0.5fr;
+    grid-template-areas: "row1 row1"
+                         "row2 row2"
+                         "country country"
+                         "button button";
+}
+
+.fieldset,
+.c-fieldset {
+    all: unset;
+    width: 100%;    
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.fieldset {
+    display: flex;
+    gap: 20px;
+}
+
+.row1 {
+    grid-area: row1;
+}
+
+.row2 {
+    grid-area: row2;
+}
+
+.fieldset > p {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    all: unset;
+}
+
+input, .select-flag {
+    backdrop-filter: blur(32px);
+    border: 2px solid rgba(0, 255, 200, 1);
+    border-radius: 5px;
+    padding: 5px 9px;
+}
+
+.error {
+    border: 2px solid red;
+    color: red;
+}
+
+.c-fieldset {
+    flex-direction: column;
+    grid-area: country;
+}
+
+.c-fieldset span
+
+.select-flag {
+    all: unset;
+    color: white;
+    width: 100%;
+}
+
+.cont-btn {
+    all: unset;
+    cursor: pointer;
+    border: 2px solid rgba(0, 255, 200, 0.5);
+    background-color: cornflowerblue;
+    border-radius: 7px;
+    max-width: 280px;
+    text-align: center;
+    margin: 10px auto;
+    padding: 4px 10px;
+    font-family: 'Poppins','Roboto', 'Archivo Black', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    grid-area: button;
+}
+
+.cont-btn:hover {
+    transition: 0.5s;
+    background-color: rgb(31, 110, 237);
+}
+
+/* CHANGE TO GRID*/
+
+/* 3 rows 2 columns */
+
+@media screen and (max-width: 700px) {
+    .form {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: "row1"
+                            "row2"
+                            "country";
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    .fieldset {
+        flex-direction: column;
+    }
+}

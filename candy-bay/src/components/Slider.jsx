@@ -3,11 +3,11 @@ import bear from './assets/blue-bear.png'
 import './slider.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar as faStarSolid, faAngleLeft,faAngleRight, faPlus} from '@fortawesome/free-solid-svg-icons'
-import { faStar as faStarRegular } from '@fortawesome/free-regular-svg-icons'
 import products from '../data/products'
 import convertPrice from '../utils/ConvertPrice'
 import { PriceContext } from '../context/PriceContext'
 import displayRating from '../utils/DisplayRating'
+import { Link } from 'react-router'
 
 function Slider({currentIndex, setCurrentIndex}) {
   const {priceBCH} = useContext(PriceContext)
@@ -29,22 +29,6 @@ function Slider({currentIndex, setCurrentIndex}) {
     }
   }
 
-  /* function displayRating(rating) {
-    const stars = []
-
-        for (let i = 0; i < 5; i++) {
-          stars.push(
-            <FontAwesomeIcon
-              key={i}
-              icon={i < rating ? faStarSolid : faStarRegular}
-            />
-          )
-        }
-    return (
-      <>{stars}</>
-    )
-  }*/
-
   return (
     <div className='slider'>
       <FontAwesomeIcon icon={faAngleLeft} className='arrow left' onClick={() => handleIndex("previous")}/>
@@ -64,11 +48,13 @@ function Slider({currentIndex, setCurrentIndex}) {
       </div>
       <div className="right-div">
         <div className="product-price">
-          <h2>{convertPrice(subProducts[currentIndex].price, priceBCH)}</h2>
+          <h2>{convertPrice(subProducts[currentIndex].price, priceBCH)} BCH</h2>
           <p>
             {subProducts[currentIndex].description}
           </p>
-          <FontAwesomeIcon icon={faPlus} className='plus'/>
+          <Link to={`product/${subProducts[currentIndex].id}`} className='link-slider'>
+            <FontAwesomeIcon icon={faPlus} className='plus'/>
+          </Link>
         </div>
       </div>
       <FontAwesomeIcon icon={faAngleRight} className='arrow right' onClick={() => handleIndex("next")}/>

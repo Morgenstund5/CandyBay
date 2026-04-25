@@ -31,8 +31,6 @@
     width: 250px;
 }
 
-
-
 .link {
     text-decoration: none;
     color: white;
@@ -64,11 +62,38 @@
     
 }
 
-
-
 .login-btn:hover {
     background-color: rgb(77, 144, 252);
     transition: 1s;
+}
+
+.cart-icon {
+    all: unset;
+    color: white;
+    font-size: 24px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 700,
+  'GRAD' 0,
+  'opsz' 24,;
+  color: white;
+  font-size: 36px;
+  cursor: pointer;
+  position: relative;
+}
+
+.number-of-items {
+    font-size: 16px;
+    border-radius: 40%;
+    padding: 1px 6px;
+    text-align: center;
+    background-color: red;
+    font-weight: 700;
+    transform: translateY(-33%) translateX(-10px);
+    position: absolute;
 }
 
 .bars-icon {

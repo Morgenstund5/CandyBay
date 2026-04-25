@@ -7,7 +7,7 @@ const convertPrice = (price, priceBCH) => {
     if (priceBCH === null) {
       return <span className='loader'></span>
     }
-    return <>{productPrice} BCH</>
+    return productPrice
   }
 
 export default convertPrice

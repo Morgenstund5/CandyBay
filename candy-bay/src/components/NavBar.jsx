@@ -31,9 +31,11 @@ function NavBar() {
         <FontAwesomeIcon className='bars-icon' icon={faBars} onClick={()=> {
             handleDropdown()
         }}/>  {/* change state!!! */}
-        <span className="material-symbols-outlined">
-            shopping_cart<span className='number-of-items'>{productsCount}</span>
-        </span>
+        <Link to="cart">
+            <span className="material-symbols-outlined">
+                shopping_cart<span className='number-of-items'>{productsCount}</span>
+            </span>
+        </Link>
         {/*<button className='cart-icon'>
             <FontAwesomeIcon icon={faCartShopping} />
         </button>*/}
