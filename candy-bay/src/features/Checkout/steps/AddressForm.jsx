@@ -43,7 +43,7 @@ function AddressForm({ step, setStep }) {
   return (
     <div>
         <div className="address-form-div">
-          <h2>Address Form</h2>
+          <h2>Enter your address</h2>
                   <form action="post">
                     <fieldset className='fieldset row1'>
                       <p>
