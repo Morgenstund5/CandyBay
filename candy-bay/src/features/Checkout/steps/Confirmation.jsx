@@ -1,8 +1,10 @@
 import React from 'react'
 import './confirmation.css'
 import { Link, Links } from 'react-router'
+import { generateOrderId } from '../../../utils/generateOrderId'
 
 function Confirmation() {
+
   return (
     <div className='confirmation-div'>
       <div className="order-conf">
@@ -20,7 +22,7 @@ function Confirmation() {
             Order ID:
           </p>
           <span className='gen-data'>
-            #CB-1023
+            {generateOrderId()}
           </span>
         </div>
         <div className='delivery'>
