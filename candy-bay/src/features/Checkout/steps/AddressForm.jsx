@@ -98,7 +98,7 @@ function AddressForm({ step, setStep }) {
                       <p>
                         <span>Country</span>
                         <ReactFlagsSelect 
-                        className='select-flag'
+                        
                         selected={selected}
                         onSelect={code => {
                           setSelected(code)
@@ -107,7 +107,7 @@ function AddressForm({ step, setStep }) {
                         countries = {countries}
                         customLabels = {customLabels}                     
                         required
-                        className={errors.country? 'error' : ''}
+                        className={errors.country? 'select-flag error-flag' : 'select-flag'}
                         placeholder={errors.country? `${errors.country}` : "Select a country"}
                         />
                     </p>
