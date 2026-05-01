@@ -18,12 +18,20 @@ function NavBar() {
   return (
     <nav className='nav-bar'>
         <div className='top-bar'>
-            <button className='login-btn'>LOGIN</button>
-
+            
+            <Link to="cart">
+                <span className="material-symbols-outlined">
+                    shopping_cart<span className='number-of-items'>{productsCount}</span>
+                </span>
+            </Link>
             <div className='headers'>
                 {
                 features.map((feature) => {
-                    return feature.src ? <Link to={feature.url}><img className='nav-bar-logo' key={feature.id} src={feature.src} ></img></Link> : <Link className='link' key={feature.id} to={feature.url}>{feature.title}</Link>
+                    return feature.src ? 
+                    <Link to={feature.url}>
+                        <img className='nav-bar-logo' key={feature.id} src={feature.src} ></img>
+                    </Link> :
+                    <Link className='link' key={feature.id} to={feature.url}>{feature.title}</Link>
                 })
             }
             </div>
@@ -31,14 +39,7 @@ function NavBar() {
         <FontAwesomeIcon className='bars-icon' icon={faBars} onClick={()=> {
             handleDropdown()
         }}/>  {/* change state!!! */}
-        <Link to="cart">
-            <span className="material-symbols-outlined">
-                shopping_cart<span className='number-of-items'>{productsCount}</span>
-            </span>
-        </Link>
-        {/*<button className='cart-icon'>
-            <FontAwesomeIcon icon={faCartShopping} />
-        </button>*/}
+        
         </div>
 
         {isDropdown && (
@@ -46,7 +47,9 @@ function NavBar() {
                 <div className='links'>
                 {
                 features.map((feature) => {
-                    return feature.src ? null : <a className='link drop-show' key={feature.key} href={feature.url}>{feature.title}</a>
+                    return feature.src ? 
+                    null :
+                    <Link className='link drop-show' key={feature.key} to={feature.url}>{feature.title}</Link>
                 })
             }
                 </div>
