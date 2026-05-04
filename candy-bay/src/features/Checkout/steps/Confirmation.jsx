@@ -1,9 +1,15 @@
-import React from 'react'
+import React, { useContext, useEffect } from 'react'
 import './confirmation.css'
 import { Link, Links } from 'react-router'
 import { generateOrderId } from '../../../utils/generateOrderId'
+import { CartContext } from '../../../context/CartContext'
 
 function Confirmation() {
+  const {productsInCart, setProductsInCart} = useContext(CartContext)
+
+  useEffect(() => {
+    setProductsInCart([])
+  }, [])
 
   return (
     <div className='confirmation-div'>

@@ -59,17 +59,22 @@
 
 .send-to {
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     gap: 5px;
     flex-grow: 1;
     margin-bottom: 0;    
 }
 
+.qrcode {
+    margin: 0 auto;
+}
+
 .send-to > span {
     text-align: center;
     margin: auto 0;
     color: rgb(0, 255, 200);
-    cursor: unset;
+    cursor: pointer
 }
 
 .send-to p, .wallet-address {
@@ -182,6 +187,7 @@
     flex-grow: 1;
 }
 
+
 .payment-bottom button {
     margin: 0 ;
     padding: 8px 16px;
@@ -216,4 +222,29 @@
     align-items: center;
     gap: 3px;
     color: rgba(255,255,255,0.4);
+}
+
+.qr-code {
+    position: absolute;
+    top: 45px;
+    left: 250px;
+    padding: 60px;
+    border: #2e77e4 2px solid;
+    border-radius: 5px;
+    width: 200px;
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.96);
+}
+
+@media screen and (max-width: 700px) {
+    .payment-div {
+        padding: 0px 0px;
+        min-height: 90vh;
+        
+    }
+
+    .qr-add {
+        padding: 0 10px;
+        gap: 20px;
+    }
 }

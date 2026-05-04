@@ -9,7 +9,7 @@ function Processing({ step, setStep }) {
     }, 2000)
     setTimeout(() => {
         setStep(step + 1)
-    }, 4000)
+    }, 5000)
   }, [])
   return (
     <div className='processing-div'>

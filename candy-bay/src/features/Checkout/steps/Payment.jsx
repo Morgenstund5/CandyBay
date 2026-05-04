@@ -2,10 +2,13 @@ import React, { useState } from 'react'
 import "./payment.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQrcode } from '@fortawesome/free-solid-svg-icons'
+import {QRCode} from "react-qr-code";
+
 
 function Payment({totalPrice, step, setStep}) {
   const address = "qz3x4k9p7s8d2f6h5j0l9n8m7p6q5r4s3t2u1v0wxy"
   const [copied, setCopied] = useState(false)
+  const [showQR, setShowQR] = useState(false)
 
   const displayAddress = () => {
     const croppedAddress = `${address.slice(0,6)}...${address.slice(-6)}`
@@ -21,6 +24,11 @@ function Payment({totalPrice, step, setStep}) {
     }, 3000)
   }
 
+  const handleShowQr = () => {
+    if(showQR === false) setShowQR(true)
+    if(showQR === true) setShowQR(false)
+  }
+
   const handlePayment = () => {
     setStep(step + 1)
     console.log("Step: ", step)
@@ -28,6 +36,12 @@ function Payment({totalPrice, step, setStep}) {
 
   return (
     <div className='payment-div'>
+      {
+      showQR && 
+      <div className='qr-code'>
+        <QRCode value={displayAddress()} size={200} />  
+      </div>
+      }
       <div className='order-total'>
         <p>Order total</p>
         <h3>{totalPrice} <span>BCH</span></h3>
@@ -36,11 +50,13 @@ function Payment({totalPrice, step, setStep}) {
         <div className="surr">
           <div className='send-to'>
           {/*<FontAwesomeIcon icon={faQrcode} />*/}
-          <span className="material-symbols-outlined">
+          {/*<span className="material-symbols-outlined qrcode" onClick={() => handleShowQr()}>
             qr_code_scanner
-          </span>
-          <p>Send <span>{totalPrice}</span> BCH to:</p>
-        </div>
+          </span>*/}
+          
+            <p>Send <span>{totalPrice}</span> BCH to:</p>
+            <QRCode value={displayAddress()} size={150}  className='qrcode'/>  
+          </div>
         <div className='wallet-address'>
           <p>{displayAddress()}</p>
           <button className='copy' onClick={(e) => handleCopy()}>
