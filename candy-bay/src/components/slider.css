@@ -31,6 +31,7 @@
     display: flex;
     align-items: center;
     min-width: fit-content;
+    
 }
 
 .img-container:hover {
@@ -43,12 +44,15 @@
 .img {
     flex: 2;
     min-width: 19vw;
+    transition: min-width 0.5s;
+    animation: grow-item 1s ease-in-out;
 }
 
 .left-div {
     display: flex;
     justify-content: flex-end;
     flex-direction: row;
+    animation: slide-in-fromRight 0.8s ease-in-out;
 }
 
 .product-name {
@@ -64,6 +68,7 @@
     font-size: 48px;
     font-weight: 900;
     font-family: 'Poppins','Archivo Black', sans-serif;
+    animation: grow-item 0.8s ease-in-out;
 }
 
 .product-name > p {
@@ -73,6 +78,7 @@
     max-width: 550px;
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: -1px;
+    animation: grow-item 0.8s ease-in-out;
 }
 
 .rating {
@@ -80,6 +86,7 @@
     justify-content: flex-end;
     font-size: 24px;
     margin-top: 8px;
+    animation: grow-item 0.5s ease-in-out;
 }
 
 .product-name > h1, .product-name > p, .product-name > p{
@@ -93,16 +100,32 @@
 .right-div {
     display: flex;
     align-items: flex-end;
+    animation: slide-in-fromLeft 0.8s ease-in-out;
+}
+
+.animate-toRight {
+    animation: slide-toRight 0.8s ease-in-out;
+}
+
+.animate-toLeft {
+    animation: slide-toLeft 0.8s ease-in-out;
+}
+
+.shrink {
+    animation: shrink-item 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .product-price {
     margin-bottom: 12%;
+    animation: grow-item 0.8s ease-in-out;
 }
 
 .product-price > h2 {
     font-weight: 400;
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
+    animation: grow-item 0.8s ease-in-out;
 }
 
 .product-price > p {
@@ -111,6 +134,7 @@
     font-size: 20px;
     margin-top: 6px;
     font-family: 'Roboto', sans-serif;
+    animation: grow-item 0.8s ease-in-out;
 }
 
 .link-slider {
@@ -185,6 +209,23 @@
         
     }
 
+    .product-name {
+        max-width: none;
+    }
+
+    .product-name h1 {
+        text-align: center;
+        font-size: 44px;
+    }
+
+    .product-name p {
+        white-space: unset;
+    }
+
+    .product-name h1, .product-name p, .rating {
+        justify-content: center;
+    }
+
     .arrow {
         display: none;
     }
@@ -228,5 +269,83 @@
     .img-container {
         display: flex;
         align-items: center;
+    }
+}
+
+@keyframes slide-in-fromRight {
+    0% {
+        transform: translate(20vw, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-fromLeft {
+    0% {
+        transform: translate(-20vw, 0);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.25;
+    }
+    100% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
+@keyframes grow-item {
+    0% {
+        transform: scale(0.95);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes shrink-item {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-toRight {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.15;
+    }
+    100% {
+        transform: translate(20vw, 0);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-toLeft {
+    0% {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.15;
+    }
+    100% {
+        transform: translate(-20vw, 0);
+        opacity: 0;
     }
 }

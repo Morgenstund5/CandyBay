@@ -12,9 +12,12 @@ import { Link } from 'react-router'
 function Slider({currentIndex, setCurrentIndex}) {
   const {priceBCH} = useContext(PriceContext)
   const subProducts = products.slice(0, 5)
+  const [isAnimating, setIsAnimating] = useState(false)
 
   const handleIndex = (direction) => {
-    if(direction === "next") {
+    setIsAnimating(true)
+    setTimeout(() => {
+      if(direction === "next") {
       if(currentIndex != 4) {
         setCurrentIndex(currentIndex + 1)
       } else {
@@ -27,12 +30,14 @@ function Slider({currentIndex, setCurrentIndex}) {
         setCurrentIndex(4)
       }
     }
+    setIsAnimating(false)
+    }, 550)
   }
 
   return (
     <div className='slider'>
       <FontAwesomeIcon icon={faAngleLeft} className='arrow left' onClick={() => handleIndex("previous")}/>
-      <div className="left-div">
+      <div className={`left-div ${isAnimating && "animate-toRight"}`}>
         <div className='product-name'>
           <h1>{(subProducts[currentIndex].title).toUpperCase()}</h1>
           <p>{(subProducts[currentIndex].subtitle).toUpperCase()}</p>
@@ -43,10 +48,10 @@ function Slider({currentIndex, setCurrentIndex}) {
       </div>
       <div className='img-container'>
         <FontAwesomeIcon icon={faAngleLeft} className=' arr' onClick={() => handleIndex("previous")}/>
-        <img src={subProducts[currentIndex].img} alt="" className='img'/>
+        <img src={subProducts[currentIndex].img} alt="" className={`img ${isAnimating && "shrink"}`}/>
         <FontAwesomeIcon icon={faAngleRight} className=' arr' onClick={() => handleIndex("next")}/>
       </div>
-      <div className="right-div">
+      <div className={`right-div ${isAnimating && "animate-toLeft"}`}>
         <div className="product-price">
           <h2>{convertPrice(subProducts[currentIndex].price, priceBCH)} BCH</h2>
           <p>

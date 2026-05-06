@@ -41,9 +41,12 @@
     letter-spacing: 1px;
 }
 
-.headers > a:hover {
+.headers > a {
+    transition: color 0.7s;
+}
+
+.headers > a:hover, .material-symbols-outlined:hover {
     color: rgba(87, 255, 247, 0.881);
-    transition: 1s;
 }
 
 .login-btn {
@@ -59,7 +62,6 @@
     border-width: 2px;
     background-color: transparent;
     cursor: pointer;
-    
 }
 
 .login-btn:hover {
@@ -71,6 +73,7 @@
     all: unset;
     color: white;
     font-size: 24px;
+    transition: color 0.7s;
 }
 
 .material-symbols-outlined {
@@ -83,6 +86,7 @@
   font-size: 36px;
   cursor: pointer;
   position: relative;
+  transition: color 0.7s;
 }
 
 .number-of-items {

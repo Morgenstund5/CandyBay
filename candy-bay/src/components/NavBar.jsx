@@ -19,7 +19,7 @@ function NavBar() {
     <nav className='nav-bar'>
         <div className='top-bar'>
             
-            <Link to="cart">
+            <Link to="cart" className='cart-icon-nav'>
                 <span className="material-symbols-outlined">
                     shopping_cart<span className='number-of-items'>{productsCount}</span>
                 </span>
