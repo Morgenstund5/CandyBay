@@ -7,7 +7,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 
-.safety-container {
+.faq-container {
     display: flex;
     flex-direction: column;
     padding: 10px 30px;
@@ -21,7 +21,7 @@
 
 }
 
-.safety-container h3 {
+.faq-container h3 {
     font-size: 48px;
     font-weight: 900;
     font-family: 'Poppins','Archivo Black', sans-serif;
@@ -29,38 +29,64 @@
     text-transform: uppercase;
 }
 
-.guide {
-    display: flex;
-    justify-content: space-between;
-    
-    padding: 0;
-}
-
-.guide p {
+.q-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    border: solid 1px rgba(255,255,255,0.4);
+    border-radius: 5px;
+    padding: 0 15px;
+    margin-bottom: 20px;
     font-family: 'Roboto', sans-serif;
-    font-size: 24px;
-    text-align: justify;
-    letter-spacing: 0.8px;
-    line-height: 1.2;
-    max-width: 400px;
 }
 
-.guide img {
-    max-width: 300px;
-    max-height: 200px;
-    margin: auto auto auto 0;
+.q-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 0;
 }
+
+.divider {
+    
+    animation: show-divider 0.5s;
+}
+
+.q-top p {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.answer {
+    color: rgba(255,255,255,0.5);
+    animation: show-item 0.5s;
+    border-top: solid 1px rgba(255,255,255,0.4);
+    padding-top: 10px;
+}
+
+.angle {
+    cursor: pointer;
+}
+
 
 @media screen and (max-width: 600px) {
-    .safety-container {
-        padding: 5px 5px;
-    }
-    .safety-container h3 {
+    .faq-container h3 {
         font-size: 36px;
-        text-align: center;
     }
-    .guide {
-        flex-direction: column;
-        padding: 5px;
+}
+
+@keyframes show-item {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes show-divider {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }

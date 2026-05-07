@@ -7,7 +7,7 @@ import Confirmation from './steps/Confirmation';
 import Processing from './steps/Processing';
 function Checkout() {
   const {totalPrice, productsInCart, productsCount} = useContext(CartContext)
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(2)
 
   return (
     <div className='checkout-container'>

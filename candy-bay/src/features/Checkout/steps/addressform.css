@@ -131,7 +131,7 @@ input {
 
 /* 3 rows 2 columns */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
     .form {
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;

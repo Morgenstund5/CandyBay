@@ -50,3 +50,13 @@
     transform: rotate(360deg);
   }
 } 
+
+@media screen and (max-width: 600px) {
+  .processing-div {
+    padding: 5px 30px;
+  }
+
+  .processing-div {
+    text-align: center;
+  }
+}

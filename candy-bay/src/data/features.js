@@ -9,7 +9,7 @@ const features = [
         {
             id: 2,
             title: "FAQ",
-            url: "",  
+            url: "faq",  
         },
         {
             id: 3,
@@ -20,7 +20,7 @@ const features = [
         {
             id: 4,
             title: "Safety",
-            url: "",  
+            url: "safety",  
         },
         {
             id: 5,

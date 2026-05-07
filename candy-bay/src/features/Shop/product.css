@@ -25,10 +25,10 @@
 
 .product_left-div {
     overflow: hidden;
-    min-width: 300px;
+    min-width: 270px;
     background-size: cover;
     background-position: center;
-    height: 360px;
+    min-height: 360px;
 }
 
 
@@ -106,9 +106,8 @@
     }
     
     .product_left-div {
-        padding: 5px;
-        display: flex;
-
+        min-width: 214px;
+        min-height: 288px;
     }
 
     

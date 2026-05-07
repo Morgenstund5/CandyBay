@@ -23,7 +23,9 @@ function Cart() {
         <div className='cart-products'>
             {
                 productsInCart.length > 0 ?
-                productsInCart.map(product => (
+                <div className="fragment">
+                {productsInCart.map(product => (
+                    
                     <div className="product-row">
                         <div className="prod-cart-img" style={{ backgroundImage: `url(${product.bgImg})` }}></div>
                         <div className="prod-info">
@@ -42,15 +44,26 @@ function Cart() {
                             </div>
                         </div>
                     </div>
-                )) : <h4 className='no-products'>The shopping cart is empty.</h4>
+                    
+                    
+                )) }
+                    <div className='total-price'>
+                        Total: {totalPrice} BCH
+                    </div>
+                    <Link to={"/checkout"} className='checkout-btn'>
+                        Checkout
+                    </Link>
+                    </div>
+                    : 
+                <div className="fragment">
+                    <h4 className='no-products'>The shopping cart is empty.</h4>
+                    <Link to={"/shop"} className='checkout-btn'>
+                        Go to shop
+                    </Link>
+                </div>
             }
         </div>
-        <div className='total-price'>
-            Total: {totalPrice} BCH
-        </div>
-        <Link to={"/checkout"} className='checkout-btn'>
-            Checkout
-        </Link>
+        
         <Outlet />
     </div>
     

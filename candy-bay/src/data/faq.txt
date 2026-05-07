@@ -1,15 +1,20 @@
 #1 - Kann ich meine Bestellung komplet sicher über euren Shop abwickeln?
--Ja. Füge einfach deine gewünschte Bestellmenge in den Warenkorb hinzu. Gib beim Checkout deine Empfangsadresse an. Deine personenbezogenen Daten werden von Shopsystem automatisch PGP-verschlüsselt und nach dem Versand sofort gelöscht. Unser eingespieltes Team verpackt die Ware unter Reinraumbedingungen und sorgt für eine reibungslose und sichere Abwicklung.
+    -Ja. Füge einfach deine gewünschte Bestellmenge in den Warenkorb hinzu. 
+    Gib beim Checkout deine Empfangsadresse an. Deine personenbezogenen Daten 
+    werden von Shopsystem automatisch PGP-verschlüsselt und nach dem Versand sofort 
+    gelöscht. Unser eingespieltes Team verpackt die Ware unter Reinraumbedingungen 
+    und sorgt für eine reibungslose und sichere Abwicklung.
 
 #2 - Zahlung nur in Kryptowährung?
--Korrekt. Wir bieten ausschließlich Zahlung in Bitcoin, Ripple, IOTA und Ethereum. Das Verfahren ist nicht kompliziert. Ihr müsst euch nur ein Wallet anlegen. Payback und andere Bonussysteme bieten wir nicht an. Wir sind nicht bescheuert.
+-Korrekt. Wir bieten ausschließlich Zahlung in Bitcoin, Ripple, IOTA und Ethereum. 
+Das Verfahren ist nicht kompliziert. Ihr müsst euch nur ein Wallet anlegen. Payback
+und andere Bonussysteme bieten wir nicht an. Wir sind nicht bescheuert.
 
 #3 - Wie empfange ich meine Sendung anonym?
-- Unsere Versand arbeitet für dich rund um die Uhr, um einen schnellen und risikolosen Versand zu gewährleisten. Der Versand erfolgt innerhalb weniger Tage. Du kannst deine Sendung an jede beliebige Postadresse, ein Postfach oder eine Packstation senden lassen. Dank unseres komplexen und dezentralisierten Systems erfolgt bereits die übergabe an den Logistikdienstleister anonym und ist nicht zurückverfolgbar.
+- Unsere Versand arbeitet für dich rund um die Uhr, um einen schnellen und risikolosen
+Versand zu gewährleisten. Der Versand erfolgt innerhalb weniger Tage. Du kannst deine 
+Sendung an jede beliebige Postadresse, ein Postfach oder eine Packstation senden lassen.
+Dank unseres komplexen und dezentralisierten Systems erfolgt bereits die übergabe an den
+Logistikdienstleister anonym und ist nicht zurückverfolgbar.
 
-# 4 - Why only BCH?
-- We support Satoshi's vision.
-
-#5 - Is this real?
-- Of course not. This is just portfolio project [Explain autodidactic shit and stuff...]
 

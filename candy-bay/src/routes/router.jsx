@@ -6,6 +6,8 @@ import App from "../App";
 import Product from "../features/Shop/Product";
 import Cart from "../features/Cart/Cart";
 import Checkout from "../features/Checkout/Checkout";
+import Faq from "../features/Faq/Faq";
+import Safety from "../features/Safety/Safety";
 
 
 const routes = [
@@ -20,6 +22,14 @@ const routes = [
             {
                 path: "shop",
                 element: <Shop />,
+            },
+            {
+                path: "faq",
+                element: <Faq />
+            },
+            {
+                path:"safety",
+                element: <Safety />
             },
             {
                 path: "product/:productId",

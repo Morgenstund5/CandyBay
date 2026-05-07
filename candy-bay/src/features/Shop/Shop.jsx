@@ -1,7 +1,7 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import purpleFlower from '../../assets/products/bg/purple-flower.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlus, faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faPlus, faCartShopping, faCheck } from '@fortawesome/free-solid-svg-icons'
 import './shop.css'
 import products from '../../data/products'
 import convertPrice from '../../utils/ConvertPrice'
@@ -13,6 +13,16 @@ import { CartContext } from '../../context/CartContext'
 function Shop() {
   const {priceBCH} = useContext(PriceContext)
   const { addToCart } = useContext(CartContext)
+  const [added, setAdded] = useState()
+
+  const handleCart = (product) => {
+    addToCart(product)
+    setAdded(product)
+    setTimeout(() => {
+      setAdded()
+    }, 2000)
+  } 
+
   return (
     <div className='shop'>
       {products.map(product => (
@@ -27,9 +37,9 @@ function Shop() {
             <div onClick={(e) => {
               e.preventDefault(); 
               e.stopPropagation()
-              addToCart(product)
+              handleCart(product)
               }}>
-              <FontAwesomeIcon icon={faCartShopping} className='cart'/>
+              <FontAwesomeIcon icon={added === product ? faCheck : faCartShopping} className='cart'/>
             </div>
         </Link>
       ))}

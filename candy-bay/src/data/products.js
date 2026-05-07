@@ -102,6 +102,22 @@ const products = [
         Contains 50mg THC`,
         category: "THC",
         bg: ""
+    },
+    {
+        id: 7,
+        img: blueTeddy,
+        bgImg: bgBlueTeddy,
+        title: "Stable Genius",
+        subtitle: "A calm wave of\ncozy euphoria",
+        rating: 5,
+        price: 35,
+        description: `Lots of MDMA, no unnecessary additives,\n 
+        and the perfect way to start any conversation\n
+        Part of CandyBay's new, explosive LineUp,\n
+        crafted for you with greatest care by our renowned experts.
+        Contains 120mg MDMA.`,
+        category: "MDMA",
+        bg: ""
     }
     
 ]
