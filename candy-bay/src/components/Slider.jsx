@@ -13,30 +13,30 @@ function Slider({currentIndex, setCurrentIndex}) {
   const {priceBCH} = useContext(PriceContext)
   const subProducts = products.slice(0, 5)
   const [isAnimating, setIsAnimating] = useState(false)
+  const [direction, setDirection] = useState(null)
 
-  const handleIndex = (direction) => {
+  const handleDirection = (dir) => {
+    if(isAnimating) return
+
+    setDirection(dir)
     setIsAnimating(true)
-    setTimeout(() => {
-      if(direction === "next") {
-      if(currentIndex != 4) {
-        setCurrentIndex(currentIndex + 1)
-      } else {
-        setCurrentIndex(0)
-      }
-    } else {
-      if(currentIndex != 0) {
-        setCurrentIndex(currentIndex - 1)
-      } else {
-        setCurrentIndex(4)
-      }
+  }
+
+  const handleAnimationEnd = () => {
+    if(!isAnimating) return
+    if(direction === "next") {
+      setCurrentIndex(prev => prev !== 4 ? prev + 1 : 0)
+    } else if(direction === "previous") {
+      setCurrentIndex(prev => prev !== 0 ? prev - 1 : 4)
     }
+
     setIsAnimating(false)
-    }, 550)
+    setDirection(null)
   }
 
   return (
     <div className='slider'>
-      <FontAwesomeIcon icon={faAngleLeft} className='arrow left' onClick={() => handleIndex("previous")}/>
+      <FontAwesomeIcon icon={faAngleLeft} className='arrow left' onClick={() => handleDirection("previous")}/>
       <div className={`left-div ${isAnimating && "animate-toRight"}`}>
         <div className='product-name'>
           <h1>{(subProducts[currentIndex].title).toUpperCase()}</h1>
@@ -47,9 +47,9 @@ function Slider({currentIndex, setCurrentIndex}) {
         </div>
       </div>
       <div className='img-container'>
-        <FontAwesomeIcon icon={faAngleLeft} className=' arr' onClick={() => handleIndex("previous")}/>
-        <img src={subProducts[currentIndex].img} alt="" className={`img ${isAnimating && "shrink"}`}/>
-        <FontAwesomeIcon icon={faAngleRight} className=' arr' onClick={() => handleIndex("next")}/>
+        <FontAwesomeIcon icon={faAngleLeft} className=' arr' onClick={() => handleDirection("previous")}/>
+        <img src={subProducts[currentIndex].img} alt="" className={`img ${isAnimating && "shrink"}`} onAnimationEnd={() => handleAnimationEnd()}/>
+        <FontAwesomeIcon icon={faAngleRight} className=' arr' onClick={() => handleDirection("next")}/>
       </div>
       <div className={`right-div ${isAnimating && "animate-toLeft"}`}>
         <div className="product-price">
@@ -62,7 +62,7 @@ function Slider({currentIndex, setCurrentIndex}) {
           </Link>
         </div>
       </div>
-      <FontAwesomeIcon icon={faAngleRight} className='arrow right' onClick={() => handleIndex("next")}/>
+      <FontAwesomeIcon icon={faAngleRight} className='arrow right' onClick={() => handleDirection("next")}/>
     </div>
   )
 }

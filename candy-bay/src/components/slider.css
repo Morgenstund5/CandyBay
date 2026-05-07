@@ -53,6 +53,7 @@
     justify-content: flex-end;
     flex-direction: row;
     animation: slide-in-fromRight 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .product-name {
@@ -69,6 +70,7 @@
     font-weight: 900;
     font-family: 'Poppins','Archivo Black', sans-serif;
     animation: grow-item 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .product-name > p {
@@ -79,6 +81,7 @@
     font-family: 'Roboto Condensed', sans-serif;
     letter-spacing: -1px;
     animation: grow-item 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .rating {
@@ -87,6 +90,7 @@
     font-size: 24px;
     margin-top: 8px;
     animation: grow-item 0.5s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .product-name > h1, .product-name > p, .product-name > p{
@@ -101,14 +105,17 @@
     display: flex;
     align-items: flex-end;
     animation: slide-in-fromLeft 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .animate-toRight {
     animation: slide-toRight 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .animate-toLeft {
     animation: slide-toLeft 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .shrink {
@@ -119,6 +126,7 @@
 .product-price {
     margin-bottom: 12%;
     animation: grow-item 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .product-price > h2 {
@@ -126,6 +134,7 @@
     margin-bottom: 0;
     font-family: 'Roboto', sans-serif;
     animation: grow-item 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .product-price > p {
@@ -135,6 +144,7 @@
     margin-top: 6px;
     font-family: 'Roboto', sans-serif;
     animation: grow-item 0.8s ease-in-out;
+    animation-fill-mode: forwards;
 }
 
 .link-slider {
