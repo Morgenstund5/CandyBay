@@ -52,13 +52,23 @@
 
 .q-top p {
     font-size: 18px;
-    margin-bottom: 5px;
+    
+}
+
+.answer-wrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.answer-wrapper.open {
+    max-height: 200px;
+    border-top: solid 1px rgba(255,255,255,0.4);
 }
 
 .answer {
     color: rgba(255,255,255,0.5);
     animation: show-item 0.5s;
-    border-top: solid 1px rgba(255,255,255,0.4);
     padding-top: 10px;
 }
 

@@ -25,7 +25,9 @@ function Faq() {
                         <p>{q.question}</p>
                         <FontAwesomeIcon icon={show.includes(q.id) ? faAngleUp: faAngleDown} className='angle' onClick={() => handleShowAnswer(q)}/>
                     </div>
-                    {show.includes(q.id) && <p className='answer'>{q.answer}</p>}
+                    <div className={`answer-wrapper ${show.includes(q.id) ? "open" : ""}`}>
+                        <p className='answer'>{q.answer}</p>
+                    </div>
                 </div>
             ))}
         </div>
