@@ -8,6 +8,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartShopping, faCheck } from '@fortawesome/free-solid-svg-icons'
 import displayRating from '../../utils/DisplayRating'
 import { CartContext } from '../../context/CartContext'
+import { Link } from 'react-router'
 
 function Product() {
   const {addToCart, deleteFromCart, productsInCart} = useContext(CartContext)
@@ -28,7 +29,7 @@ function Product() {
   return (
     <div className='product-container'>
       <div className='product'>
-        <div className="product_left-div" style={{ backgroundImage: `url(${product.bgImg})` }}>
+        <div className="product_left-div" style={{ backgroundImage: `url(${product.img})` }}>
           {/*<img src={product.bgImg} alt="" />*/}
         </div>
         <div className="product_right-div">
@@ -45,10 +46,15 @@ function Product() {
               {product.description}
             </p>
           </div>
-          <button className="cart-div" onClick={() => handleCart(product)}>
-            <FontAwesomeIcon icon={added ? faCheck : faCartShopping} />
-            <span>{added ? "Added!" : "Add to Cart"}</span>
-          </button>
+          <div className='button-container'>
+            <button className="cart-div" onClick={() => handleCart(product)}>
+              <FontAwesomeIcon icon={added ? faCheck : faCartShopping} />
+              <span>{added ? "Added!" : "Add to Cart"}</span>
+            </button>
+            <Link to={"/cart"} className='co-btn'>
+              Checkout
+            </Link>
+          </div>
         </div>
       </div>
     </div>

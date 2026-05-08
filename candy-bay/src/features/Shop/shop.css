@@ -22,7 +22,7 @@
     width: 280px;
     min-height: 350px;
     text-align: center;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.8);
     border: 2px solid rgba(87, 255, 247, 0.881);
     backdrop-filter: blur(10px) brightness(120%);
     border-radius: 8px;
