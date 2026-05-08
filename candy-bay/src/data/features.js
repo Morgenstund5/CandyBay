@@ -25,7 +25,7 @@ const features = [
         {
             id: 5,
             title: "Contact",
-            url: "",  
+            url: "contact",  
         },
     ]
 

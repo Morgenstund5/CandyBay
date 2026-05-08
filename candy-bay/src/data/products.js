@@ -10,6 +10,10 @@ import bgBlueWink from "../assets/products/bg/blue-wink.png"
 import bgLemonDrop from "../assets/products/bg/lemon-drop.png"
 import bgBumpyRide from "../assets/products/bg/bumpy-ride.png"
 import bgBlueTeddy from "../assets/products/bg/blue-bear.png"
+import stableGenius from "../assets/products/stable-genius.png"
+import bgStableGenius from "../assets/products/bg/stable-genius.png"
+import silkRoad from "../assets/products/silk-road.png"
+import bgSilkRoad from "../assets/products/bg/silk-road.png"
 
 
 const products = [
@@ -105,17 +109,53 @@ const products = [
     },
     {
         id: 7,
-        img: blueTeddy,
-        bgImg: bgBlueTeddy,
+        img: stableGenius,
+        bgImg: bgStableGenius,
         title: "Stable Genius",
-        subtitle: "A calm wave of\ncozy euphoria",
+        subtitle: "Make MDMA Great Again",
         rating: 5,
-        price: 35,
+        price: 57,
         description: `Lots of MDMA, no unnecessary additives,\n 
-        and the perfect way to start any conversation\n
+        and the perfect way to start any conversation.\n
         Part of CandyBay's new, explosive LineUp,\n
         crafted for you with greatest care by our renowned experts.
         Contains 120mg MDMA.`,
+        category: "MDMA",
+        bg: ""
+    },
+    {
+        id: 8,
+        img: silkRoad,
+        bgImg: bgSilkRoad,
+        title: "Silk Road",
+        subtitle: "Anonymous Market",
+        rating: 5,
+        price: 57,
+        description: `A nostalgic throwback to the early underground\n 
+        marketplace era.\n
+        Smooth, balanced effects with a clean euphoric\n
+        climb designed for long conversations and late-night\n
+        adventures.\n
+        One of CandyBay's most mysterious creations.\n
+        Contains 100mg MDMA.`,
+        category: "MDMA",
+        bg: ""
+    },
+    {
+        id: 9,
+        img: silkRoad,
+        bgImg: bgSilkRoad,
+        title: "Devil's Advocate",
+        subtitle: "Infernous trip",
+        rating: 5,
+        price: 57,
+        description: `A nostalgic throwback to the early underground\n 
+        marketplace era.\n
+        Smooth, balanced effects with a clean euphoric\n
+        climb designed for long conversations and late-night\n
+        adventures.\n
+        One of CandyBay's most mysterious creations.\n
+        Contains 100mg MDMA.`,
         category: "MDMA",
         bg: ""
     }

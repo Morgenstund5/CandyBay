@@ -8,6 +8,7 @@ import Cart from "../features/Cart/Cart";
 import Checkout from "../features/Checkout/Checkout";
 import Faq from "../features/Faq/Faq";
 import Safety from "../features/Safety/Safety";
+import Contact from "../features/Contact/Contact";
 
 
 const routes = [
@@ -30,6 +31,10 @@ const routes = [
             {
                 path:"safety",
                 element: <Safety />
+            },
+            {
+                path:"contact",
+                element: <Contact />
             },
             {
                 path: "product/:productId",

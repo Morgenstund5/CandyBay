@@ -83,7 +83,9 @@
 
 @media screen and (max-width: 700px){
     .confirmation-div {
-        padding: 5px;
+        padding: 50px 5px;
+        min-height: 100dvh;
+        justify-content: flex-start;
     }
 
     .order-conf {
