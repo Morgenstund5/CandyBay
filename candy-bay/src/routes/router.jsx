@@ -9,12 +9,14 @@ import Checkout from "../features/Checkout/Checkout";
 import Faq from "../features/Faq/Faq";
 import Safety from "../features/Safety/Safety";
 import Contact from "../features/Contact/Contact";
+import ErrorPage from "./errorPage/ErrorPage";
 
 
 const routes = [
     {
         path: "/",
         element: <App />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 index: true,
@@ -49,7 +51,11 @@ const routes = [
                 element: <Checkout />
             }
         ]
-    }
+    },
+    {/*
+        path: "*",
+        element: <ErrorPage />
+    */}
 ];
 
 export default routes;

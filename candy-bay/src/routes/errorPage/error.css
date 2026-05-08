@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.error-container {
+    min-height: 100vh;
+    max-width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+.error-info {
+    text-align: center;
+    font-weight: 700;
+    font-family: 'Poppins','Archivo Black', sans-serif;
+    font-size: 24px;
+    margin-top: 50px;
+}
+
+.error-info p {
+    margin: 0;
+}
+
+.error-container h3 {
+    font-size: 48px;
+    font-weight: 900;
+    font-family: 'Poppins','Archivo Black', sans-serif;
+    margin: 0;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.reason {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    text-align: justify;
+    letter-spacing: 0.8px;
+    line-height: 1.2;
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+.images {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.fbi, .dea , .ice {
+    overflow: hidden;
+    min-width: 246px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 224px;
+}
+
+.l-cont {
+    display: flex;
+    margin-top: 20px;
+}
+
+.back-to{
+    all: unset;
+    max-width: 150px;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+    .error-container {
+        padding-bottom: 20px;
+    }
+
+    .error-info {
+        margin-top: 5px;
+        font-size: 20px;
+    }
+
+    .error-container h3 {
+        font-size: 36px;
+    }
+
+    .reason {
+        font-size: 18px;
+        padding: 0px 15px;
+        letter-spacing: normal;
+        line-height: 1.2;
+        text-align: justify 
+    }
+
+    .images {
+        flex-direction: column;
+        
+    }
+}
