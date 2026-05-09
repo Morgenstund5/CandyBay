@@ -1,14 +1,33 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import './navbar.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBars, faCartShopping, faL } from '@fortawesome/free-solid-svg-icons'
-import { Link } from 'react-router'
+import { Link, useLocation } from 'react-router'
 import features from '../data/features'
 import { CartContext } from '../context/CartContext'
 
 function NavBar() {
     const [isDropdown, setIsDropdown] = useState(false)
     const { productsCount } = useContext(CartContext)
+    const [isMobile, setIsMobile] = useState(window.innerWidth < 600)
+
+    const location = useLocation()
+
+    useEffect(() => {
+        setIsDropdown(false)
+    }, [location.pathname])
+
+    useEffect(() => {
+       const handleResize = () => {
+        const mobile = window.innerWidth < 600
+        setIsMobile(mobile)
+        if(!mobile) setIsDropdown(false)
+      }
+    
+        window.addEventListener("resize", handleResize)
+    
+        return () => window.removeEventListener("resize", handleResize) /* cleanup */
+      })
 
     
     const handleDropdown = () => {
@@ -41,20 +60,30 @@ function NavBar() {
         }}/>  {/* change state!!! */}
         
         </div>
-
-        {isDropdown && (
-            <div className='dropdown' id='dropdown'>
+        
+            {
+                isDropdown &&
+                <div className={`dropdown show`} id='dropdown'>
                 <div className='links'>
                 {
                 features.map((feature) => {
                     return feature.src ? 
                     null :
-                    <Link className='link drop-show' key={feature.key} to={feature.url}>{feature.title}</Link>
+                    <Link 
+                        className='link drop-show' 
+                        key={feature.key} 
+                        to={feature.url}
+                        /*onClick={()=> {
+                            setIsDropdown(false)
+                        }}*/
+                        >
+                            {feature.title} 
+                        </Link>
                 })
             }
                 </div>
             </div>
-        )}
+            }
         
     </nav>
   )

@@ -108,10 +108,16 @@
 }
 
 .dropdown {
+    display: none;
+    animation: hide-item 0.8s;
+}
+
+.dropdown.show {
     width: 100%;
     display: flex;
     align-content: flex-start;
     background-color: black;
+    animation: show-item 0.8s;
 }
 
 .links {
@@ -121,6 +127,15 @@
 
 .drop {
     display: none;
+}
+
+@keyframes hide-item {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }
 
 
