@@ -138,6 +138,22 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+    .nav-bar {
+        gap: 8px;
+        padding: 0;
+    }
+    
+    .top-bar {
+        gap: 5px;
+        padding: 0;
+    }
+
+    .headers {
+        gap: clamp(4px, 2vw, 32px);
+    }
+
+}
 
 @media screen and (max-width: 600px) {
     .nav-bar {

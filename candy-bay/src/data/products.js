@@ -14,6 +14,8 @@ import stableGenius from "../assets/products/stable-genius.png"
 import bgStableGenius from "../assets/products/bg/stable-genius.png"
 import silkRoad from "../assets/products/silk-road.png"
 import bgSilkRoad from "../assets/products/bg/silk-road.png"
+import devil from "../assets/products/devil.png"
+import bgDevil from "../assets/products/bg/devil.png"
 
 
 const products = [
@@ -143,19 +145,19 @@ const products = [
     },
     {
         id: 9,
-        img: silkRoad,
-        bgImg: bgSilkRoad,
+        img: devil,
+        bgImg: bgDevil,
         title: "Devil's Advocate",
-        subtitle: "Infernous trip",
+        subtitle: "Temptation never\nfelt this smooth",
         rating: 5,
-        price: 57,
-        description: `A nostalgic throwback to the early underground\n 
-        marketplace era.\n
-        Smooth, balanced effects with a clean euphoric\n
-        climb designed for long conversations and late-night\n
-        adventures.\n
-        One of CandyBay's most mysterious creations.\n
-        Contains 100mg MDMA.`,
+        price: 37,
+        description: `A dangerously smooth ride crafted for those\n 
+        willing to dance a little closer to chaos.\n
+        Devil's Advocate delivers an intense euphoric\n
+        rush followed by waves of warmth, confidence\n
+        and uncontrollable laughter deep into the night.\n
+        One of CandyBay's boldest signature creations.\n
+        Contains 110mg MDMA.`,
         category: "MDMA",
         bg: ""
     }
