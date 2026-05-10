@@ -1,6 +1,6 @@
 import fbiImg from "../assets/fbi.png"
 import deaImg from "../assets/dea.png"
-import iceImg from "../assets/ice.png"
+import iceImg from "../assets/ICE.png"
 
 export const seized = {
     motive: `This site has been seized by the Federal Bureau of Investigation
