@@ -13,9 +13,9 @@ import bgRedKiss from './assets/bg/red-kiss.png'
 function App() {
 
   return (
-    <div className='app' style={{
+    <div className='app' /*style={{
         backgroundImage: `url(${bg})`
-    }}>
+    }}*/>
       <CartProvider>
         <NavBar />
         <PriceProvider>
