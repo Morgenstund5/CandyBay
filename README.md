@@ -11,8 +11,10 @@ This is a fictional ecommerce project built as part of my frontend portfolio.
 
 While learning German, I discovered the series “How to Sell Drugs Online (Fast)” — a comedy centered around two teenagers building an online drug marketplace. The show is filled with internet culture, startup references, and developer humor, which inspired me to recreate a similar platform.
 
-![HTSDOF screenshot](/candy-bay/src/assets/ss-1.png)
-![HTSDOF screenshot](/candy-bay/src/assets/ss-2.png)
+<img src="/candy-bay/src/assets/ss-1.png" width="45%" alt="HTSDOF screenshot">
+<img src="/candy-bay/src/assets/ss-2.png" width="45%" alt="HTSDOF screenshot">
+<!-- ![HTSDOF screenshot](/candy-bay/src/assets/ss-1.png | width=50%) -->
+<!-- ![HTSDOF screenshot](/candy-bay/src/assets/ss-2.png | width=50%) -->
 
 Through this project, I focused on building real-world __frontend skills__ such as:
 
