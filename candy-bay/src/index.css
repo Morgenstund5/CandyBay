@@ -9,12 +9,14 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100vh;
-  background-color: #0C1B57;
+  background-color: #000000;
   background-image: radial-gradient(
     circle at center,
     #2B5BB0 0%,
     #1C3D85 35%,
-    #0C1B57 55%,
-    #0C1B57 100%
+    #08133c 65%,
+    #000000 100%
   );
+  
 }
+/* #0C1B57 65%,*/

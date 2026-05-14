@@ -27,9 +27,9 @@ const products = [
         subtitle: "A night of\nfluffy happiness",
         rating: 4,
         price: 30,
-        description: `The purple flower is our go-to recommendation\n 
-        for a night full of fluffy happiness with it's dose\n optimized
-        for around six hours of perfect ecstasy\n experience.
+        description: `The purple flower is our go-to recommendation 
+        for a night full of fluffy happiness with it's dose optimized
+        for around six hours of perfect ecstasy experience.
         Contains 70mg MDMA per pill.`,
         category: "MDMA",
         bg: ""
