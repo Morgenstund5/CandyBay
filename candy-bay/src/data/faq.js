@@ -33,7 +33,7 @@ export const faq = [
         id: 5,
         question: "Is this real?",
         answer: `Of course not. This is a fictional e-commerce project built as part of my portfolio.
-        I'm a self-taught frontend developer and polyglot. While learning German, I discovered the series "How to Sell Drugs Online (Fast)", 
+        I'm a self-taught frontend developer who enjoys learning languages. While learning German, I discovered the series "How to Sell Drugs Online (Fast)", 
         which inspired me to recreate the website the main characters built.
         Through this project, I focused on building real-world frontend skills such as state management, API integration and user experience design.`
     },
