@@ -2,8 +2,7 @@ https://candy-bay-nu.vercel.app/
 
 # CandyBay
 
-A fictional crypto-native ecommerce interface inspired by the German series
-“How to Sell Drugs Online (Fast)”.
+A fictional dark-web inspired ecommerce interface inspired by the German series “How to Sell Drugs Online (Fast)”.
 
 ## Description
 
